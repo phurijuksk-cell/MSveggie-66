@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="th">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>M&S veggie - หน้าแรก</title>
+        <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🥬</text></svg>">
+        <link rel="stylesheet" href="MS.css">
+    </head>
+    <body>
+
+        <nav>
+            <a href="index.html" class="logo">
+                <span>🌿</span> M&S veggie
+            </a>
+            <div class="hamburger" onclick="toggleMenu()">☰</div>
+            <ul class="nav-links">
+                <li><a href="MSaboutus.html">เกี่ยวกับเรา</a></li>
+                <li><a href="MSbill.html">ตรวจสอบตะกร้า</a></li>
+                <li><a href="MSlogin.html">Log in</a></li>
+            </ul>
+        </nav>
+
+        <div class="slider-container">
+            <div class="slider-track">
+                <img src="https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=400&q=80" alt="ผัก">
+                <img src="https://images.unsplash.com/photo-1610832958506-aa56368176cf?auto=format&fit=crop&w=400&q=80" alt="ผลไม้">
+                <img src="https://images.unsplash.com/photo-1557844352-761f2565b576?auto=format&fit=crop&w=400&q=80" alt="ผักสวนครัว">
+                <img src="https://images.unsplash.com/photo-1523348837708-15d4a09cfac2?auto=format&fit=crop&w=400&q=80" alt="เมล็ดพันธ์">
+                <img src="https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=400&q=80" alt="ผัก">
+                <img src="https://images.unsplash.com/photo-1610832958506-aa56368176cf?auto=format&fit=crop&w=400&q=80" alt="ผลไม้">
+                <img src="https://images.unsplash.com/photo-1557844352-761f2565b576?auto=format&fit=crop&w=400&q=80" alt="ผักสวนครัว">
+                <img src="https://images.unsplash.com/photo-1523348837708-15d4a09cfac2?auto=format&fit=crop&w=400&q=80" alt="เมล็ดพันธ์">
+            </div>
+        </div>
+
+        <div class="container">
+            <h1>เกี่ยวกับเรา</h1>
+            <div class="about-content">
+                <p style="font-size: 1.1rem; line-height: 1.8;">
+                    M&S Veggie ตั้งใจส่งต่อผักและผลไม้ดี ๆ จากฟาร์มทั่วประเทศไทยให้ถึงครัวของคุณแบบสดใหม่ทุกวัน 
+                    เราคัดของเหมือนเลือกให้ครอบครัวตัวเองกิน—ต้องสด สะอาด ปลอดภัย และราคาไม่เวอร์เกินไป
+                </p>
+                <br>
+                <p style="font-size: 1.1rem; line-height: 1.8;">
+                    เราอยากให้การกินผักเป็นเรื่องง่ายและสนุก ทุกกล่องที่ส่งออกไปเต็มไปด้วยความตั้งใจของทีมงานและเกษตรกรไทยที่อยากให้คุณได้ของดี ๆ 
+                    พร้อมสนับสนุนชุมชนให้เติบโตไปด้วยกัน
+                </p>
+                <br>
+                <p style="font-size: 1.1rem; font-weight: bold; color: var(--main-green);">
+                    ติดต่อเราได้เสมอ ไม่ว่าจะถามเมนู แนะนำผัก หรือปรึกษาว่าควรซื้ออะไรวันนี้
+                </p>
+                
+                <div style="background-color: #f9f9f9; padding: 20px; border-radius: 10px; margin-top: 20px;">
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="margin-bottom: 10px;"><strong>📞 โทร:</strong> 065-895-XXXX</li>
+                        <li style="margin-bottom: 10px;"><strong>📧 Email:</strong> contact@msveggie.com</li>
+                        <li style="margin-bottom: 10px;"><strong>📘 Facebook:</strong> แล้วผมไม่บอกไงฮ่าๆ</li>
+                        <li style="margin-bottom: 10px;"><strong>💬 Line:</strong> @msveggie</li>
+                    </ul>
+                </div>
+                
+                <br>
+                <hr style="border: 0; border-top: 1px solid #ddd; margin: 20px 0;">
+                
+                <div style="text-align: right;">
+                    <a href="index.html" class="btn-add" style="text-decoration: none; padding: 10px 30px; font-size: 1rem; display: inline-block;">
+                        ← กลับไปเลือกซื้อสินค้า
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p>Web design by Phurijuk Sukmorn & Rachan Chouiradom</p>
+        </footer>
+
+        <button onclick="scrollToTop()" id="scrollTopBtn" title="เลื่อนไปข้างบน">↑</button>
+
+        <script src="script.js"></script>
+    </body>
+</html>

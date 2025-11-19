@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="th">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>M&S veggie - สมัครสมาชิก</title>
+        <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🥬</text></svg>">
+        <link rel="stylesheet" href="MS.css">
+    </head>
+    <body>
+
+        <nav>
+            <a href="index.html" class="logo">
+                <span>🌿</span> M&S veggie
+            </a>
+            <ul class="nav-links">
+                <li><a href="MSaboutus.html">เกี่ยวกับเรา</a></li>
+                <li><a href="MSbill.html">ตรวจสอบตะกร้า</a></li>
+                <li><a href="MSlogin.html">Log in</a></li>
+            </ul>
+        </nav>
+
+        <div class="container" style="display: flex; justify-content: center; align-items: center; min-height: 80vh;">
+            <div style="background: white; padding: 40px; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); width: 100%; max-width: 400px; text-align: center;">
+                
+                <h2 style="color: var(--main-green); margin-bottom: 20px;">สร้างบัญชีใหม่</h2>
+                
+                <div class="form-group">
+                    <label>ชื่อ-นามสกุล</label>
+                    <input type="text" placeholder="ชื่อของคุณ">
+                </div>
+
+                <div class="form-group">
+                    <label>อีเมล</label>
+                    <input type="email" placeholder="อีเมล">
+                </div>
+                
+                <div class="form-group">
+                    <label>รหัสผ่าน</label>
+                    <input type="password" placeholder="กำหนดรหัสผ่าน">
+                </div>
+
+                <div class="form-group">
+                    <label>ยืนยันรหัสผ่าน</label>
+                    <input type="password" placeholder="ยืนยันรหัสผ่านอีกครั้ง">
+                </div>
+
+                <button class="modal-btn" onclick="alert('สมัครสมาชิกสำเร็จ! กรุณาเข้าสู่ระบบ'); window.location.href='project104.html'">สมัครสมาชิก</button>
+                
+                <div style="margin-top: 20px;">
+                    มีบัญชีอยู่แล้ว? 
+                    <a href="MSlogin.html" style="color: var(--main-green); font-weight: bold;">เข้าสู่ระบบเลย</a>
+                </div>
+
+            </div>
+        </div>
+
+        <footer>
+            <p>Web design by Phurijuk Sukmorn & Rachan Chouiradom</p>
+        </footer>
+
+        <script src="script.js"></script>
+    </body>
+</html>
