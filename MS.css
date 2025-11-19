@@ -1,0 +1,96 @@
+/* MS.css */
+@import url('https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;600&display=swap');
+
+:root {
+    --main-green: #198754; /* ตรงกับ btn-success */
+}
+
+body {
+    font-family: 'Sarabun', sans-serif;
+    background-color: #f8f9fa;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* --- Slider Animation (Custom CSS เพราะ Bootstrap Carousel ปกติจะเลื่อนทีละรูป) --- */
+/* กล่องนอกสุด (กรอบทีวี) */
+.slider-container {
+    overflow: hidden;       /* ซ่อนส่วนที่เกินขอบ */
+    background: #e9ecef;
+    padding: 20px 0;
+    white-space: nowrap;    /* บังคับให้รูปเรียงแนวนอนยาวๆ ไม่ตกลงมา */
+    position: relative;
+}
+
+/* รางเลื่อน (ฟิล์มภาพยนต์) */
+.slider-track {
+    display: inline-block;
+    /* สั่งให้เล่น Animation ชื่อ 'slide' นาน 40 วินาที แบบวนลูปตลอดกาล (infinite) */
+    animation: slide 40s linear infinite;
+}
+
+/* รูปภาพ */
+.slider-track img {
+    height: 200px;
+    width: 300px;
+    object-fit: cover;
+    margin: 0 10px;         /* ระยะห่างระหว่างรูป */
+    border-radius: 0.375rem;
+}
+
+/* คำสั่งการเคลื่อนไหว */
+@keyframes slide {
+    from { 
+        transform: translateX(0); /* เริ่มที่จุด 0 */
+    }
+    to { 
+        transform: translateX(-50%); /* เลื่อนไปทางซ้าย 50% (ความกว้างของรูปชุดแรก) */
+        /* พอถึง -50% มันจะดีดกลับมา 0 ทันทีโดยอัตโนมัติ ทำให้ดูเหมือนหมุนวนไม่จบ */
+    }
+}
+.slider-track:hover {
+    animation-play-state: paused;
+}
+
+/* --- Product Filter Logic (CSS Radio Hack) --- */
+/* ส่วนนี้ยังคงใช้ CSS Hack เพื่อกรองสินค้าโดยไม่ต้องเขียน JS loop */
+input[name="filter"] {
+    display: none;
+}
+
+/* เปลี่ยนสีปุ่มเมื่อถูกเลือก */
+#filter-all:checked ~ .container .btn-group label[for="filter-all"],
+#filter-veggie:checked ~ .container .btn-group label[for="filter-veggie"],
+#filter-fruit:checked ~ .container .btn-group label[for="filter-fruit"],
+#filter-seed:checked ~ .container .btn-group label[for="filter-seed"] {
+    background-color: var(--main-green);
+    color: white;
+    border-color: var(--main-green);
+}
+
+/* ซ่อนการ์ดที่ไม่ตรงหมวดหมู่ */
+#filter-veggie:checked ~ .container .row .col-lg-3:not([data-category="veggie"]),
+#filter-fruit:checked ~ .container .row .col-lg-3:not([data-category="fruit"]),
+#filter-seed:checked ~ .container .row .col-lg-3:not([data-category="seed"]) {
+    display: none;
+}
+
+/* Animation for Cards */
+.card {
+    transition: transform 0.2s;
+    cursor: pointer;
+}
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
+}
+
+/* Back to Top Button */
+#scrollTopBtn {
+    position: fixed;
+    bottom: 20px; right: 20px;
+    z-index: 100;
+    opacity: 0.7;
+}

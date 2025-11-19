@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="th">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>M&S veggie - ตะกร้าของคุณ</title>
+        <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🥬</text></svg>">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="MS.css">
+    </head>
+    <body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-success sticky-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html"><span>🌿</span> M&S veggie</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">หน้าแรก</a></li>
+                    <li class="nav-item"><a class="nav-link" href="MSaboutus.html">เกี่ยวกับเรา</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="#">ตรวจสอบตะกร้า</a></li>
+                    <li class="nav-item"><a class="nav-link" href="MSlogin.html">เข้าสู่ระบบ</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container my-5">
+        <h1 class="text-center text-success mb-4">ตะกร้าของคุณ</h1>
+        
+        <div class="card border-0 shadow-sm">
+            <div class="card-body p-4">
+                <div class="table-responsive">
+                    <table class="table table-hover align-middle">
+                        <thead class="table-success">
+                            <tr>
+                                <th>สินค้า</th>
+                                <th class="text-center">จำนวน</th>
+                                <th class="text-end">ราคาต่อหน่วย</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>คะน้าฮ่องกงออร์แกนิค</td>
+                                <td class="text-center" style="width: 150px;">
+                                    <div class="input-group input-group-sm">
+                                        <input type="number" class="form-control text-center" value="1" min="1">
+                                        <span class="input-group-text">กก.</span>
+                                    </div>
+                                </td>
+                                <td class="text-end">40 บาท</td>
+                            </tr>
+                            <tr>
+                                <td>สตรอว์เบอร์รี่สด 80</td>
+                                <td class="text-center">
+                                    <div class="input-group input-group-sm">
+                                        <input type="number" class="form-control text-center" value="2" min="1">
+                                        <span class="input-group-text">แพ็ค</span>
+                                    </div>
+                                </td>
+                                <td class="text-end">120 บาท</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="text-end mt-4">
+                    <h4>ราคารวมโดยประมาณ: <span class="text-danger">280 บาท</span></h4>
+                    <small class="text-muted">*ราคาสุทธิจะคำนวณในขั้นตอนชำระเงิน</small>
+                </div>
+
+                <div class="d-grid gap-2 d-md-flex justify-content-md-end mt-4">
+                    <a href="index.html" class="btn btn-secondary">← กลับไปเลือกซื้อสินค้า</a>
+                    <button class="btn btn-success px-5" data-bs-toggle="modal" data-bs-target="#checkoutModal">ชำระเงิน</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-dark text-white text-center py-3 mt-auto">
+        <div class="container"><p class="mb-0">Web design by Phurijuk Sukmorn & Rachan Chouiradom</p></div>
+    </footer>
+
+    <div class="modal fade" id="checkoutModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">ยืนยันการชำระเงิน</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>ยืนยันการสั่งซื้อสินค้า?</p>
+                    <h4 class="text-success text-center my-3">ยอดชำระ: 280 บาท</h4>
+                    <div class="bg-light p-3 rounded">
+                        <strong>ช่องทางชำระเงิน:</strong>
+                        <div class="form-check mt-2">
+                            <input class="form-check-input" type="radio" name="pay" checked>
+                            <label class="form-check-label">โอนเงินผ่านธนาคาร</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="pay">
+                            <label class="form-check-label">เก็บเงินปลายทาง</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">ยกเลิก</button>
+                    <a href="index.html" class="btn btn-primary">ยืนยัน</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    </body>
+</html>
